@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
+
+
+/* hover:text-[17px] ease-in 
+hover:transition duration-200 text-white 
+active:text-gray-300 */
+
 @tailwind utilities;
