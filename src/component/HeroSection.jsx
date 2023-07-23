@@ -3,8 +3,8 @@ import { Typewriter } from 'react-simple-typewriter'
 
 export default function HeroSection() {
     return (
-        <div className=" flex h-48 max-h-full items-center text-center justify-center border-2 border-rose-500">
-            <div className='border-2 border-blue-700'>
+        <div className=" flex h-48 max-h-full items-center text-center justify-center">
+            <div className=''>
                 <h1 className='text-[4rem] font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-red-500'>
                     DREAM DEAL
                     <span>

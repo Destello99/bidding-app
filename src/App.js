@@ -1,21 +1,20 @@
 import { useState } from "react";
 import {
-  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 
 import HeroSection from "./component/HeroSection";
 import Aboutus from "./page/Aboutus";
-import TempNavbar from "./component/TempNavbar";
-import TempFooter from "./component/TempFooter";
+import Footer from "./component/Footer";
 import Login from "./page/Login";
+import Navbar from "./component/Navbar"
 function App() {
   const [isLoginPage, setIsLoginPage] = useState(false);
 
   return (
     <>
-      <TempNavbar></TempNavbar>
+      <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/about" element={<Aboutus />} />
@@ -23,7 +22,7 @@ function App() {
         <Route path="/signup" element={<Aboutus />} />
         <Route path="/Contact" element={<Aboutus />} />
       </Routes>
-      {!isLoginPage && <TempFooter></TempFooter>}
+      {!isLoginPage && <Footer></Footer>}
     </>
   );
 }
