@@ -9,7 +9,7 @@ export default function
                 <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                         <div>
-                            <img src="#" className="mr-5 h-6 sm:h-9" alt="logo" />
+                            <img src="logo.jpg" className="mr-5 h-6 sm:h-9" alt="bid" />
                             <p className="max-w-xs mt-4 text-sm text-gray-600">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
                                 accusantium.
@@ -129,35 +129,7 @@ export default function
                                         {" "}
                                         History{" "}
                                     </a>
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        Careers{" "}
-                                    </a>
-                                </nav>
-                            </div>
-                            <div>
-                                <p className="font-medium">Services</p>
-                                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        1on1 Coaching{" "}
-                                    </a>
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        Company Review{" "}
-                                    </a>
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        Accounts Review{" "}
-                                    </a>
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        HR Consulting{" "}
-                                    </a>
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        SEO Optimisation{" "}
-                                    </a>
+                                   
                                 </nav>
                             </div>
                             <div>
@@ -192,15 +164,11 @@ export default function
                                         {" "}
                                         Returns Policy{" "}
                                     </a>
-                                    <a className="hover:opacity-75" href="">
-                                        {" "}
-                                        Accessibility{" "}
-                                    </a>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <p className="mt-8 text-xs text-gray-800">© 2022 Comany Name</p>
+                    <p className="mt-8 text-xs text-gray-800">© 2022 Dream Deal</p>
                 </div>
             </footer>
         </>

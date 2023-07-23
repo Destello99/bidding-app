@@ -14,7 +14,7 @@ export default function TempNavbar() {
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-10 w-10"
                             fill="none"
-                            viewBox="0 0 24 24"
+                            viewBox="0 0 34 24"
                             stroke="currentColor"
                         >
                             <path
@@ -27,19 +27,19 @@ export default function TempNavbar() {
                     </div>
                     <div className="text-gray-500 order-3 w-full md:w-auto md:order-2">
                         <ul className="flex font-semibold justify-between">
-                            <Link to="/" className='md:px-4 md:py-2 text-indigo-500'>
+                            <Link to="/" className='md:px-4 md:py-2 focus:text-indigo-500'>
                                 Home
                             </Link>
-                            <Link to="/signup" className="md:px-4 md:py-2 hover:text-indigo-400">
+                            <Link to="/signup" className="focus:text-indigo-500 md:px-4 md:py-2 hover:text-indigo-400 ">
                                 SignUp
                             </Link>
-                            <Link to="/signup" className="md:px-4 md:py-2 hover:text-indigo-400">
+                            <Link to="/signup" className=" focus:text-indigo-500 md:px-4 md:py-2 hover:text-indigo-400">
                                 About
                             </Link>
-                            <Link to="/signup" className="md:px-4 md:py-2 hover:text-indigo-400">
+                            <Link to="/signup" className=" focus:text-indigo-500 md:px-4 md:py-2 hover:text-indigo-400">
                                 Explore
                             </Link>
-                            <Link to="/signup" className="md:px-4 md:py-2 hover:text-indigo-400">
+                            <Link to="/signup" className=" focus:text-indigo-500 md:px-4 md:py-2 hover:text-indigo-400">
                                 Contact Us
                             </Link>
                         </ul>
