@@ -1,0 +1,79 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1690110584033,
+        "children": [],
+        "todo": {
+          "content": "adding logo image to site",
+          "id": 1690110584033,
+          "level": "default",
+          "done": false,
+          "start": 1690110584033
+        }
+      },
+      {
+        "key": 1690110597560,
+        "children": [],
+        "todo": {
+          "content": "making active color fix",
+          "id": 1690110597560,
+          "level": "default",
+          "done": true,
+          "start": 1690110597561,
+          "focus": false,
+          "end": 1690151934652
+        }
+      },
+      {
+        "key": 1690151862854,
+        "children": [
+          {
+            "key": 1690151889870,
+            "children": [],
+            "todo": {
+              "content": "try login from react using spring boot",
+              "id": 1690151889870,
+              "level": "success",
+              "done": false,
+              "start": 1690151889870
+            }
+          }
+        ],
+        "todo": {
+          "content": "Work pending on login page",
+          "id": 1690151862854,
+          "level": "default",
+          "done": false,
+          "start": 1690151862854
+        }
+      },
+      {
+        "key": 1690145575840,
+        "children": [],
+        "todo": {
+          "content": "adding lottie animation",
+          "id": 1690145575840,
+          "level": "default",
+          "done": true,
+          "start": 1690145575840,
+          "focus": false,
+          "end": 1690145595088
+        }
+      }
+    ],
+    "expandKeys": [
+      1690151862854
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "showLine": false,
+    "playFontSize": 24,
+    "title": "task",
+    "autoSort": false,
+    "showEndTime": false,
+    "lang": "en",
+    "version": "1690151934702"
+  }
+}
