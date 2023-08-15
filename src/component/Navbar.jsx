@@ -48,6 +48,9 @@ export default function TempNavbar() {
                             <Link to="/signup" className=" focus:text-indigo-500 md:px-4 md:py-2 hover:text-indigo-400">
                                 Contact Us
                             </Link>
+                            <Link to="/products" className=" focus:text-indigo-500 md:px-4 md:py-2 hover:text-indigo-400">
+                                ProductList
+                            </Link>
                         </motion.ul>
                     </div>
                     <div className="order-2 md:order-3">
