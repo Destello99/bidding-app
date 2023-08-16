@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CustomerServices from "../services/CustomerServices";
 
 function SignUp(){
 // <!-- component -->
@@ -11,16 +13,61 @@ const [firstName, setFirstname] = useState('');
   const [age,setAge]=useState('');
   const[phoneNumber,setPhoneNumber]=useState('');
 
-const coustomer = {
-    firstName,
-    lastName,
-    email,
-    password,
-    confirmPassword,
-  }
+  const navigate= useNavigate();
+const addCustomer=(e)=>{
+
+	const customer = {
+		firstName,
+		lastName,
+		age,
+		email,
+		password,
+		confirmPassword,
+
+	  }
+	  alert(JSON.stringify(customer))
+console.log(customer)
+	CustomerServices.create(customer).then((response)=>{
+		console.log("customer added", response.data);
+		navigate('/login');
+	}).catch((error)=>{
+		console.log("error",error.response);
+	})
+}
+
+
+
+  const handleFirstNameChange = (e) => {
+    setFirstname(e.target.value);
+  };
+
+  
+  const handleLastNameChange = (e) => {
+    setLastname(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleAgeChange = (e) => {
+    setAge(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
 
 return (
-<body className="font-mono bg-gray-400">
+<div className="font-mono bg-gray-400">
 		{/* <!-- Container --> */}
 		<div className="container mx-auto">
 			<div className="flex justify-center px-6 my-12">
@@ -37,7 +84,7 @@ return (
 						<form className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
 							<div className="mb-4 md:flex md:justify-between">
 								<div className="mb-4 md:mr-2 md:mb-0">
-									<label className="block mb-2 text-sm font-bold text-gray-700" For="firstName">
+									<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="firstName">
 										First Name
 									</label>
 									<input
@@ -46,10 +93,11 @@ return (
 										type="text"
                                         value={firstName}
 										placeholder="First Name"
+										onChange={handleFirstNameChange}
 									/>
 								</div>
 								<div className="md:ml-2">
-									<label className="block mb-2 text-sm font-bold text-gray-700" For="lastName">
+									<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="lastName">
 										Last Name
 									</label>
 									<input
@@ -58,11 +106,12 @@ return (
 										type="text"
                                         value={lastName}
 										placeholder="Last Name"
+										onChange={handleLastNameChange}
 									/>
 								</div>
 							</div>
 							<div className="mb-4">
-								<label className="block mb-2 text-sm font-bold text-gray-700" For="email">
+								<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="email">
 									Email
 								</label>
 								<input
@@ -71,12 +120,13 @@ return (
 									type="email"
                                     value={email}
 									placeholder="Email"
+									onChange={handleEmailChange}
 								/>
 							</div>
                         {/* Age and Phone no */}
                         <div className="mb-4 md:flex md:justify-between">
 								<div className="mb-4 md:mr-2 md:mb-0">
-									<label className="block mb-2 text-sm font-bold text-gray-700" For="password">
+									<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="password">
 										Age
 									</label>
 									<input
@@ -85,11 +135,12 @@ return (
 										type="number"
                                         value={age}
 										placeholder="eg.10"
+										onChange={handleAgeChange}
 									/>
 									
 								</div>
 								<div className="md:ml-2">
-									<label className="block mb-2 text-sm font-bold text-gray-700" For="c_password">
+									<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="c_password">
 										Phone Number
 									</label>
 									<input
@@ -98,13 +149,14 @@ return (
 										type="number"
                                         value={phoneNumber}
 										placeholder="1234567890"
+										onChange={handlePhoneNumberChange}
 									/>
 								</div>
 							</div>
 
 							<div className="mb-4 md:flex md:justify-between">
 								<div className="mb-4 md:mr-2 md:mb-0">
-									<label className="block mb-2 text-sm font-bold text-gray-700" For="password">
+									<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="password">
 										Password
 									</label>
 									<input
@@ -113,10 +165,11 @@ return (
 										type="password"
                                         value={password}
 										placeholder="******************"
+										onChange={handlePasswordChange}
 									/>
 								</div>
 								<div className="md:ml-2">
-									<label className="block mb-2 text-sm font-bold text-gray-700" For="c_password">
+									<label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="c_password">
 										Confirm Password
 									</label>
 									<input
@@ -125,13 +178,14 @@ return (
 										type="password"
                                         value={confirmPassword}
 										placeholder="******************"
+										onChange={handleConfirmPasswordChange}
 									/>
 								</div>
 							</div>
 							<div className="mb-6 text-center">
 								<button
 									className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-									type="button"
+									type="submit" onClick={(e)=>addCustomer(e)}
 								>
 									Register Account
 								</button>
@@ -158,7 +212,8 @@ return (
 				</div>
 			</div>
 		</div>
-	</body>
+		
+	</div>
 );
 };
 
