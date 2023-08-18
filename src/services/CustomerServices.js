@@ -1,5 +1,4 @@
-import httpClient from "../http-comman";
-
+import httpClient from "../http-comman"
 const create = (data) => {
     // console.log("in create");
     // alert('in create')

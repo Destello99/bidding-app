@@ -1,4 +1,4 @@
-import httpClient from "../http-common";
+import httpClient from "../http-comman";
 
 const getAll = ()=>{
     return httpClient.get('')
