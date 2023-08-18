@@ -44,7 +44,7 @@ const AddProductByAdmin = () => {
     
 <section className="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 mt-20">
     <h1 className="text-xl font-bold text-white capitalize dark:text-white">Product Information</h1>
-    <form>
+    <form encType='multipart/form-data'>
         <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
                 <label className="text-white dark:text-gray-200" htmlFor="productName">Name of Product</label>
